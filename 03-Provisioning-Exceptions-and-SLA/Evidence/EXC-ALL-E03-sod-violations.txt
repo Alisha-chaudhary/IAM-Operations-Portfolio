@@ -1,0 +1,27 @@
+EVIDENCE ID: derived from capture
+Title: SoD violations report
+Captured: 2026-11-12T18:58:16.903009Z
+Source: IdentityGuard API GET /reports/sod-violations
+Type: Actual lab evidence
+Activity: SoD validation
+Demonstrates: Current SoD conflict state
+File: Evidence/EXC-ALL-E03-sod-violations.txt
+============================================================
+{
+  "rules": [
+    [
+      "Payment Approver",
+      "Payment Initiator"
+    ],
+    [
+      "SOC Analyst",
+      "System Administrator"
+    ],
+    [
+      "Database Administrator",
+      "Security Auditor"
+    ]
+  ],
+  "total_count": 0,
+  "items": []
+}

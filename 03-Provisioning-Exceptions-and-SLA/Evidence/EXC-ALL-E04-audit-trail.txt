@@ -1,0 +1,451 @@
+EVIDENCE ID: derived from capture
+Title: Audit trail (last 40 events)
+Captured: 2026-11-12T18:58:16.903009Z
+Source: IdentityGuard API GET /audit/events
+Type: Actual lab evidence
+Activity: Audit trail review
+Demonstrates: Recent audit events including SOD_VIOLATION, ACCESS_REQUESTED, ACCESS_APPROVED
+File: Evidence/EXC-ALL-E04-audit-trail.txt
+============================================================
+[
+  {
+    "id": 50,
+    "timestamp": "2026-11-12T18:58:16.878227",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "e51f0746d4e1405596fca5e6cbea48b8"
+  },
+  {
+    "id": 49,
+    "timestamp": "2026-11-12T18:53:31.410098",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "b8a00b26998c4774ba94777a46e76c1e"
+  },
+  {
+    "id": 48,
+    "timestamp": "2026-11-12T18:53:04.987888",
+    "actor": "identityguard.admin",
+    "event_type": "SOD_VIOLATION",
+    "target": "rahul.mehta",
+    "action": "provision_access",
+    "result": "DENIED",
+    "reason": "User holds incompatible roles: Payment Approver and Payment Initiator",
+    "correlation_id": "bb8fbc4c05464e00b22c7beed55fc1ab"
+  },
+  {
+    "id": 47,
+    "timestamp": "2026-11-12T18:53:04.922795",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "bbcfa39c093047389302c8b68c1addde"
+  },
+  {
+    "id": 46,
+    "timestamp": "2026-11-12T18:52:32.753170",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "53bada1f8e9143e0882f9e4bce7da6b3"
+  },
+  {
+    "id": 45,
+    "timestamp": "2026-11-12T18:51:04.290511",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "72ce1fa08cd44682b9a6e2491587002c"
+  },
+  {
+    "id": 44,
+    "timestamp": "2026-11-12T18:50:29.394364",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "65c39a918dfb4f3d968357e1cd4e95aa"
+  },
+  {
+    "id": 43,
+    "timestamp": "2026-11-12T18:39:17.137459",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "432d8946c9234050b6292a4c0a4763e2"
+  },
+  {
+    "id": 42,
+    "timestamp": "2026-11-12T18:39:17.019523",
+    "actor": "identityguard.admin2",
+    "event_type": "ACCESS_APPROVED",
+    "target": "4",
+    "action": "approve_access_request",
+    "result": "SUCCESS",
+    "reason": "Approving duplicate request to test AlreadyProvisioned at provisioning.",
+    "correlation_id": "2f31c30897a54d6c9e06deb86713e71b"
+  },
+  {
+    "id": 41,
+    "timestamp": "2026-11-12T18:39:16.988809",
+    "actor": "identityguard.admin2",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin2",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "3a572adf861c415d88b0f2efb2e4ad52"
+  },
+  {
+    "id": 40,
+    "timestamp": "2026-11-12T18:39:04.884742",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "84020af4e6564b94ba891dd265bd0b81"
+  },
+  {
+    "id": 39,
+    "timestamp": "2026-11-12T18:38:46.680906",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REQUESTED",
+    "target": "rahul.mehta",
+    "action": "request_access",
+    "result": "SUCCESS",
+    "reason": "Requested role 'Finance Manager' for user 'rahul.mehta'",
+    "correlation_id": "f31ee6df9f3d45d2a444eb74ea3ddb58"
+  },
+  {
+    "id": 38,
+    "timestamp": "2026-11-12T18:38:46.599521",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "2ca5cd6684d64148977573451e08ab77"
+  },
+  {
+    "id": 37,
+    "timestamp": "2026-11-12T18:38:36.709000",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "d57d816dfa7148b3a8d392ac70d1ba4a"
+  },
+  {
+    "id": 36,
+    "timestamp": "2026-11-12T18:38:29.664581",
+    "actor": "identityguard.admin",
+    "event_type": "SOD_VIOLATION",
+    "target": "rahul.mehta",
+    "action": "provision_access",
+    "result": "DENIED",
+    "reason": "User holds incompatible roles: Payment Approver and Payment Initiator",
+    "correlation_id": "095aea9a8974458b87ea9f1f1cba1f96"
+  },
+  {
+    "id": 35,
+    "timestamp": "2026-11-12T18:38:29.627516",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "893a3d4bc48e411b9a43433da9452540"
+  },
+  {
+    "id": 34,
+    "timestamp": "2026-11-12T18:38:29.508311",
+    "actor": "identityguard.admin2",
+    "event_type": "ACCESS_APPROVED",
+    "target": "3",
+    "action": "approve_access_request",
+    "result": "SUCCESS",
+    "reason": "Approved for SoD conflict test demonstration.",
+    "correlation_id": "76f18ea9b84547deb3bc0e84c8faa18d"
+  },
+  {
+    "id": 33,
+    "timestamp": "2026-11-12T18:38:29.473571",
+    "actor": "identityguard.admin2",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin2",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "cf881fc4c1614262a1c4f6f148d10115"
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-11-12T18:38:22.070843",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REQUESTED",
+    "target": "rahul.mehta",
+    "action": "request_access",
+    "result": "SUCCESS",
+    "reason": "Requested role 'Payment Approver' for user 'rahul.mehta'",
+    "correlation_id": "3e4b46c13dd543228b9a2f9fa3b121c1"
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-11-12T18:38:22.034512",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "a54d1c25c56d45a8a15c9bc153761e13"
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-11-12T18:38:11.736107",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "49bdb2a0e028443dabd1e609a055272a"
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-11-12T18:38:04.517318",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_PROVISIONED",
+    "target": "sneha.rao",
+    "action": "provision_access",
+    "result": "SUCCESS",
+    "reason": "Provisioned role 'System Administrator'",
+    "correlation_id": "8a1144df72b1450d90ccc5649629af4a"
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-11-12T18:38:04.469020",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "f9d5b622d25a40bfb63b48414fbdf0c9"
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-11-12T18:37:56.952264",
+    "actor": "identityguard.admin2",
+    "event_type": "ACCESS_APPROVED",
+    "target": "2",
+    "action": "approve_access_request",
+    "result": "SUCCESS",
+    "reason": "Approved time-limited System Administrator access for emergency incident investigation.",
+    "correlation_id": "64b8b333b0ec439c9f5a2de50dfac7a9"
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-11-12T18:37:56.903684",
+    "actor": "identityguard.admin2",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin2",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "309e4ccfdfe44a02a4fe08dc88ccde05"
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-11-12T18:37:37.701890",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REQUESTED",
+    "target": "sneha.rao",
+    "action": "request_access",
+    "result": "SUCCESS",
+    "reason": "Requested role 'System Administrator' for user 'sneha.rao'",
+    "correlation_id": "4b72522c6c644d1f998966dc835c411b"
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-11-12T18:37:37.668761",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "a6cf49de6c604726bcf3e6bdeda2935c"
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-11-12T18:37:23.774262",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "cd9430a8dc06465a8c60cc3a2dd26536"
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-11-12T18:36:31.536646",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "63258bb8d5074d1cba2eda6f38084bf0"
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-11-12T18:36:21.906454",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_PROVISIONED",
+    "target": "rahul.mehta",
+    "action": "provision_access",
+    "result": "SUCCESS",
+    "reason": "Provisioned role 'Finance Manager'",
+    "correlation_id": "f57e9ae8ea9a4a978cbba74fd1cffb57"
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-11-12T18:36:21.871002",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "d86426ad0395447f8d91272679f26ea8"
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-11-12T18:36:14.453542",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "997e9c73f535453fab34c9585e3e83b7"
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-11-12T18:36:04.279672",
+    "actor": "identityguard.admin2",
+    "event_type": "ACCESS_APPROVED",
+    "target": "1",
+    "action": "approve_access_request",
+    "result": "SUCCESS",
+    "reason": "Manager endorsed temporary Finance Manager coverage for finance-ledger oversight during manager absence.",
+    "correlation_id": "5c85d2c25fec4201adcb189636a18e0e"
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-11-12T18:36:04.238197",
+    "actor": "identityguard.admin2",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin2",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "930011db0d704f748844565efb10c6df"
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-11-12T18:35:53.048988",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REQUESTED",
+    "target": "rahul.mehta",
+    "action": "request_access",
+    "result": "SUCCESS",
+    "reason": "Requested role 'Finance Manager' for user 'rahul.mehta'",
+    "correlation_id": "46fd9b8f2d544da6a2277c9cc9fa2725"
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-11-12T18:35:53.007258",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "8ef8294c2ff144eb8e0b1d92e5ac9e11"
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-11-12T18:35:37.687760",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "7e7ec57ff8e842d8bde8e9db05492150"
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-11-12T18:35:13.487801",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "f16a6e9f25584937a20791119dd381b4"
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-11-12T18:33:52.653594",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "39fd9111e55b41f4b9e03d01a32ea5c0"
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-11-12T18:33:43.056214",
+    "actor": "identityguard.admin",
+    "event_type": "LOGIN_SUCCEEDED",
+    "target": "user:identityguard.admin",
+    "action": "login",
+    "result": "SUCCESS",
+    "reason": "Valid credentials and authorized platform access",
+    "correlation_id": "02e061fc6eb34a89be5b4608eb60a7bc"
+  }
+]

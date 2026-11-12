@@ -266,6 +266,39 @@ All simulated stakeholder actions are explicitly labelled. The governance librar
 
 ---
 
+## Scenario 3 — Provisioning Exceptions and SLA Management (Completed)
+
+Scenario 3 documents the operational handling of access provisioning exceptions for the fictional organisation Asteron Financial Services. Three real access requests left unresolved after Scenario 2 were monitored, investigated, resolved (or placed in monitoring), and closed with evidence.
+
+**Case references:** IAM-EXC-2026-001, IAM-EXC-2026-002, IAM-EXC-2026-003  
+**Scenario documentation:** `03-Provisioning-Exceptions-and-SLA/`
+
+### Case outcome summary
+
+| Exception ID | Focus | Priority | Outcome | Status |
+|---|---|---|---|---|
+| IAM-EXC-2026-001 | Approved-but-unprovisioned duplicate (Finance Manager) | P3 - Medium | Closed — entitlement already held via Request ID 1 | Closed |
+| IAM-EXC-2026-002 | SoD-blocked provisioning (Payment Approver vs Payment Initiator) | P2 - High | Closed — conflict prevented, no access granted | Closed |
+| IAM-EXC-2026-003 | Time-limited privileged access expiring (System Administrator) | P3 - Medium | Open — monitoring auto-expiry | Open (monitoring) |
+
+### Key limitations
+
+- APPROVED requests that cannot be provisioned cannot be rejected through the API (reject requires REQUESTED status); such requests remain stuck APPROVED and are resolved by documentation.
+- IdentityGuard does not implement server-side SLA tracking or automatic breach escalation; SLA monitoring is manual.
+- IdentityGuard has no ServiceNow integration; ticket logging is simulated/manual.
+- Direct role assignment bypasses SoD and was not used.
+
+### Navigation
+
+- Scenario overview: `03-Provisioning-Exceptions-and-SLA/README.md`
+- Evidence register: `03-Provisioning-Exceptions-and-SLA/Evidence/Evidence-Register.md`
+- Exceptions and limitations: `03-Provisioning-Exceptions-and-SLA/Evidence/Exceptions-and-Limitations.md`
+- Closure report: `03-Provisioning-Exceptions-and-SLA/Evidence/Final-Scenario-Closure-Report.md` (within `04-Verification-and-Closure/`)
+
+All simulated stakeholder actions are explicitly labelled. The governance library remains in `00-Governance-Framework/` and is referenced, not duplicated.
+
+---
+
 ## Generated files
 
 | # | File | Type |
