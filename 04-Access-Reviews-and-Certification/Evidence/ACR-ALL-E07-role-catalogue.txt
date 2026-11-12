@@ -1,0 +1,95 @@
+EVIDENCE ID: ACR-ALL-E07-role-catalogue
+Title: Role catalogue
+Captured: 2026-11-12T19:05:41.104087Z
+Source: IdentityGuard API GET /roles
+Type: Actual lab evidence
+Activity: Role validation
+Demonstrates: All configured roles and privileged flags
+File: Evidence/ACR-ALL-E07-role-catalogue.txt
+======================================================================
+[
+  {
+    "id": 1,
+    "name": "SOC Analyst",
+    "description": "Monitors and triages security alerts",
+    "is_privileged": false
+  },
+  {
+    "id": 2,
+    "name": "Finance Analyst",
+    "description": "Reads the general ledger",
+    "is_privileged": false
+  },
+  {
+    "id": 3,
+    "name": "Finance Manager",
+    "description": "Finance oversight and reporting",
+    "is_privileged": false
+  },
+  {
+    "id": 4,
+    "name": "HR Analyst",
+    "description": "Maintains employee records",
+    "is_privileged": false
+  },
+  {
+    "id": 5,
+    "name": "System Administrator",
+    "description": "Administers production servers",
+    "is_privileged": true
+  },
+  {
+    "id": 6,
+    "name": "Database Administrator",
+    "description": "Administers production databases",
+    "is_privileged": true
+  },
+  {
+    "id": 7,
+    "name": "Payment Initiator",
+    "description": "Can create payments",
+    "is_privileged": false
+  },
+  {
+    "id": 8,
+    "name": "Payment Approver",
+    "description": "Can approve payments",
+    "is_privileged": false
+  },
+  {
+    "id": 9,
+    "name": "Vault Secret Access",
+    "description": "Read access to synthetic Vault secrets in the IdentityGuard lab",
+    "is_privileged": false
+  },
+  {
+    "id": 10,
+    "name": "IAM Administrator",
+    "description": "Administrates IdentityGuard users, roles, and access",
+    "is_privileged": true
+  },
+  {
+    "id": 11,
+    "name": "Security Auditor",
+    "description": "Reviews IdentityGuard audit information",
+    "is_privileged": false
+  },
+  {
+    "id": 12,
+    "name": "Help Desk",
+    "description": "Performs approved user and role support operations",
+    "is_privileged": false
+  },
+  {
+    "id": 13,
+    "name": "Access Reviewer",
+    "description": "Reviews and decides access review items",
+    "is_privileged": false
+  },
+  {
+    "id": 14,
+    "name": "PAM Operator",
+    "description": "Can request and check out approved privileged access",
+    "is_privileged": false
+  }
+]

@@ -299,6 +299,51 @@ All simulated stakeholder actions are explicitly labelled. The governance librar
 
 ---
 
+## Scenario 4 — Access Reviews and User Access Certification (Completed)
+
+Scenario 4 documents an end-to-end user access certification review for the fictional organisation Asteron Financial Services. Eighteen active role assignments across eleven active users were reviewed, with two roles revoked and sixteen retained. The review cycle was completed with full audit evidence.
+
+**Cycle ID:** 1 — Asteron Q4 2026 User Access Certification  
+**Scenario documentation:** `04-Access-Reviews-and-Certification/`
+
+### Case outcome summary
+
+| Metric | Value |
+|:---|---:|
+| Review cycle | ID 1, COMPLETED |
+| Active users reviewed | 11 (1 terminated user excluded) |
+| Review items | 18 |
+| RETAIN decisions | 16 |
+| REVOKE decisions | 2 |
+| Actual revocations performed | 2 |
+| Escalations | 0 |
+| Active SoD violations | 0 |
+
+### Key findings
+
+- **meera.iyer (EMP004) — Finance Analyst revoked:** Stale cross-department access retained after a Finance→HR department move.
+- **sneha.rao (EMP003) — System Administrator revoked:** Privileged emergency access concluded; no current justification for an HR user.
+- **rahul.mehta — Payment Initiator retained:** Sensitive but Finance-appropriate; no active SoD conflict (no Payment Approver held). Flagged for periodic re-confirmation.
+- Reviewer independence preserved: no user reviewed their own assignment.
+
+### Key limitations
+
+- IdentityGuard's review API supports only RETAIN and REVOKE (no MODIFY/ESCALATE).
+- REVOKE decisions take effect at cycle completion, not at decision time.
+- No auto-assignment of reviewers by manager; business judgments simulated per-department.
+
+### Navigation
+
+- Scenario overview: `04-Access-Reviews-and-Certification/README.md`
+- Evidence register: `04-Access-Reviews-and-Certification/Evidence/Evidence-Register.md`
+- Exceptions and limitations: `04-Access-Reviews-and-Certification/Evidence/Exceptions-and-Limitations.md`
+- Certification register: `04-Access-Reviews-and-Certification/02-Access-Certification/01-Certification-Register.md`
+- Final report: `04-Access-Reviews-and-Certification/04-Review-Closure/02-Final-Access-Certification-Report.md`
+
+All simulated stakeholder actions are explicitly labelled. The governance library remains in `00-Governance-Framework/` and is referenced, not duplicated.
+
+---
+
 ## Generated files
 
 | # | File | Type |

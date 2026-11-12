@@ -1,0 +1,27 @@
+EVIDENCE ID: ACR-001-E09-sod-assessment
+Title: SoD violations report
+Captured: 2026-11-12T19:05:41.104087Z
+Source: IdentityGuard API GET /reports/sod-violations
+Type: Actual lab evidence
+Activity: SoD assessment
+Demonstrates: Current SoD conflict state (zero active violations)
+File: Evidence/ACR-001-E09-sod-assessment.txt
+======================================================================
+{
+  "rules": [
+    [
+      "Payment Approver",
+      "Payment Initiator"
+    ],
+    [
+      "SOC Analyst",
+      "System Administrator"
+    ],
+    [
+      "Database Administrator",
+      "Security Auditor"
+    ]
+  ],
+  "total_count": 0,
+  "items": []
+}

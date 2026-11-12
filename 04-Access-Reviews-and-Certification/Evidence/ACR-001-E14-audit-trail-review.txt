@@ -1,0 +1,253 @@
+EVIDENCE ID: ACR-001-E14-audit-trail-review
+Title: Review audit trail
+Captured: 2026-11-12T19:10:42.030199Z
+Source: IdentityGuard API GET /audit/events
+Type: Actual lab evidence
+Activity: Audit trail
+Demonstrates: ACCESS_REVIEW_CREATED, ACCESS_REVIEW_DECISION_RECORDED, ACCESS_REVOKED, ACCESS_REVIEW_COMPLETED events
+File: Evidence/ACR-001-E14-audit-trail-review.txt
+======================================================================
+[
+  {
+    "id": 78,
+    "timestamp": "2026-11-12T19:09:35.010770",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_COMPLETED",
+    "target": "access_review:1",
+    "action": "complete_access_review",
+    "result": "SUCCESS",
+    "reason": "Completed access review cycle 'Asteron Q4 2026 User Access Certification'",
+    "correlation_id": "7ef2bd53e5014162a046a979bad61b0f"
+  },
+  {
+    "id": 77,
+    "timestamp": "2026-11-12T19:09:35.010770",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVOKED",
+    "target": "meera.iyer",
+    "action": "access_review_revoke:Finance Analyst",
+    "result": "SUCCESS",
+    "reason": "REVOKE: Meera Iyer moved from Finance to HR but retained Finance Analyst (stale cross-department access, identified in seed data). No longer required for HR responsibilities. Least privilege. Simulated business reviewer: Sneha Rao (manager).",
+    "correlation_id": "d9370ec820e141c0bb8332140dcfe1c4"
+  },
+  {
+    "id": 76,
+    "timestamp": "2026-11-12T19:09:35.005163",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVOKED",
+    "target": "sneha.rao",
+    "action": "access_review_revoke:System Administrator",
+    "result": "SUCCESS",
+    "reason": "REVOKE: System Administrator is privileged emergency access granted for a production incident (time-limited, expires 2026-11-12 19:37:23). Emergency need concluded; no current business justification for an HR user to hold privileged server administration. Remove promptly rather than waiting for auto-expiry. Simulated business reviewer: HR department head.",
+    "correlation_id": "1eaeb54fe26e4901a9ca65197cf7291f"
+  },
+  {
+    "id": 74,
+    "timestamp": "2026-11-12T19:09:00.927482",
+    "actor": "reviewer",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:15",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: IAM Administrator required for identityguard.admin platform administration. Privileged role; controlled via four-eyes in the access request/provisioning workflow. Reviewed by stand-in reviewer (user 11) to preserve independence because identityguard.admin cannot self-review their own assignment. Simulated business reviewer: IAM / security leadership.",
+    "correlation_id": "15163e39e012483fb06b4732afe6ef85"
+  },
+  {
+    "id": 72,
+    "timestamp": "2026-11-12T19:08:43.805989",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:18",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Access Reviewer appropriate for reviewer, access certification functions. Simulated business reviewer: IAM / security leadership.",
+    "correlation_id": "ba21d28bd2864a3298236450a9de2cc6"
+  },
+  {
+    "id": 71,
+    "timestamp": "2026-11-12T19:08:43.780900",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:17",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Security Auditor appropriate for governance and audit functions. Read-only oversight role. Simulated business reviewer: IAM / security leadership.",
+    "correlation_id": "7e192d7841e24dee810f9faa2339726c"
+  },
+  {
+    "id": 70,
+    "timestamp": "2026-11-12T19:08:43.744867",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:16",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: IAM Administrator required for identityguard.admin2, platform administration. Privileged role; controlled via four-eyes in the access request/provisioning workflow. Simulated business reviewer: IAM / security leadership.",
+    "correlation_id": "b16a8858730b4b80a547b7fec323346c"
+  },
+  {
+    "id": 69,
+    "timestamp": "2026-11-12T19:08:43.718566",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:14",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: SOC Analyst appropriate for Arjun Verma, Security department. Security monitoring role. Simulated business reviewer: Security department head.",
+    "correlation_id": "286d07bc5e5741628ab550c041c476f7"
+  },
+  {
+    "id": 68,
+    "timestamp": "2026-11-12T19:08:43.689608",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:13",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: PAM Operator appropriate for Kiran Reddy, IT department. Simulated business reviewer: Lisa C (manager).",
+    "correlation_id": "45f3b98c9eba461b94ae7d5636e2b2e4"
+  },
+  {
+    "id": 67,
+    "timestamp": "2026-11-12T19:08:43.657972",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:12",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Database Administrator appropriate for Kiran Reddy, IT department. Privileged but department-appropriate. Simulated business reviewer: Lisa C (manager).",
+    "correlation_id": "53f01aa79a4a422fb9e67536d0ae0393"
+  },
+  {
+    "id": 66,
+    "timestamp": "2026-11-12T19:08:43.626287",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:11",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: PAM Operator appropriate for Lisa C, IT department. Simulated business reviewer: IT department head.",
+    "correlation_id": "08e95b3975254ca8804f0e2b84913fc7"
+  },
+  {
+    "id": 65,
+    "timestamp": "2026-11-12T19:08:43.593378",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:10",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: System Administrator appropriate for Lisa C, IT department. Privileged role but department-appropriate. Periodic re-confirmation recommended. Simulated business reviewer: IT department head.",
+    "correlation_id": "e4602aa96ca4419ba9f76b30b965bd57"
+  },
+  {
+    "id": 64,
+    "timestamp": "2026-11-12T19:08:43.560713",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:9",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: HR Analyst appropriate for Meera Iyer, HR department. Simulated business reviewer: Sneha Rao (manager).",
+    "correlation_id": "57ab48715ce045f9939ec205d5c45f92"
+  },
+  {
+    "id": 63,
+    "timestamp": "2026-11-12T19:08:43.515102",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:8",
+    "action": "access_review_revoke",
+    "result": "SUCCESS",
+    "reason": "REVOKE: Meera Iyer moved from Finance to HR but retained Finance Analyst (stale cross-department access, identified in seed data). No longer required for HR responsibilities. Least privilege. Simulated business reviewer: Sneha Rao (manager).",
+    "correlation_id": "ea51765fd6bc421b9d5dab8b96c2edae"
+  },
+  {
+    "id": 62,
+    "timestamp": "2026-11-12T19:08:43.479298",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:7",
+    "action": "access_review_revoke",
+    "result": "SUCCESS",
+    "reason": "REVOKE: System Administrator is privileged emergency access granted for a production incident (time-limited, expires 2026-11-12 19:37:23). Emergency need concluded; no current business justification for an HR user to hold privileged server administration. Remove promptly rather than waiting for auto-expiry. Simulated business reviewer: HR department head.",
+    "correlation_id": "368a9fe55ad6464c89b3135cd51b526e"
+  },
+  {
+    "id": 61,
+    "timestamp": "2026-11-12T19:08:43.444540",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:6",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: HR Analyst appropriate for Sneha Rao, HR department. Maintains employee records. Simulated business reviewer: HR department head.",
+    "correlation_id": "92c75d47fce348a6b7ed2aa2e9bc178c"
+  },
+  {
+    "id": 60,
+    "timestamp": "2026-11-12T19:08:43.405570",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:5",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Payment Initiator retained for Rahul Mehta, Finance department. Sensitive payment-creation access; no Payment Approver held, so no active SoD-01 conflict. Flagged for periodic manager re-confirmation as a watch item. Simulated business reviewer: Priya Nair (manager).",
+    "correlation_id": "b7dce061887b404993ad45852274cd66"
+  },
+  {
+    "id": 59,
+    "timestamp": "2026-11-12T19:08:43.375047",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:4",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Finance Manager appropriate for Rahul Mehta, Finance department. Overlaps with Finance Analyst (same finance-ledger:read permission) but adds oversight responsibility; not excessive. Simulated business reviewer: Priya Nair (manager).",
+    "correlation_id": "2a8b0cc7354c4be9bc1981f057443d91"
+  },
+  {
+    "id": 58,
+    "timestamp": "2026-11-12T19:08:43.341990",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:3",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Finance Analyst appropriate for Rahul Mehta, Finance department. Reads general ledger as part of role. Simulated business reviewer: Priya Nair (manager).",
+    "correlation_id": "b5caf26472564c1790082df8034d2f5e"
+  },
+  {
+    "id": 57,
+    "timestamp": "2026-11-12T19:08:43.309211",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:2",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Payment Approver appropriate for Finance Manager. Priya Nair does not hold Payment Initiator, so no active SoD-01 conflict. Simulated business reviewer: Finance department head.",
+    "correlation_id": "e3711a0bbab443a9ad317907d71c0945"
+  },
+  {
+    "id": 56,
+    "timestamp": "2026-11-12T19:08:43.269418",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_DECISION_RECORDED",
+    "target": "access_review_item:1",
+    "action": "access_review_retain",
+    "result": "SUCCESS",
+    "reason": "RETAIN: Finance Manager role appropriate for Priya Nair, Finance department. finance-ledger:read oversight required for role. No SoD conflict. Simulated business reviewer: Finance department head.",
+    "correlation_id": "1ded9a134eb648dcba06cc0ea145ed18"
+  },
+  {
+    "id": 54,
+    "timestamp": "2026-11-12T19:08:04.609269",
+    "actor": "identityguard.admin",
+    "event_type": "ACCESS_REVIEW_CREATED",
+    "target": "access_review:1",
+    "action": "create_access_review",
+    "result": "SUCCESS",
+    "reason": "Created access review cycle 'Asteron Q4 2026 User Access Certification' with 18 assignment(s)",
+    "correlation_id": "679d19ac47c24ac3aa39108cef1bd2d5"
+  }
+]

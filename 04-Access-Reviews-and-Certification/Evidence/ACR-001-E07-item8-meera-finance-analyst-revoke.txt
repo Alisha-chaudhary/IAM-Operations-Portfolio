@@ -1,0 +1,12 @@
+EVIDENCE ID: Evidence/ACR-001-E07-item8-meera-finance-analyst-revoke.txt
+Title: Review decision — item 8
+Decided at: 2026-11-12T19:08:43.250750Z
+Source: IdentityGuard API POST /access-reviews/1/decisions
+Type: Actual lab evidence
+Activity: Review decision recording
+Reviewer: identityguard.admin (user 8, IAM Administrator)
+Item ID: 8
+Decision: REVOKE
+Status: 200
+======================================================================
+{"id":8,"cycle_id":1,"user_id":4,"role_id":2,"assignment_assigned_at":"2026-11-12T16:59:47.549026","decision":"REVOKE","reviewer_id":8,"decision_reason":"REVOKE: Meera Iyer moved from Finance to HR but retained Finance Analyst (stale cross-department access, identified in seed data). No longer required for HR responsibilities. Least privilege. Simulated business reviewer: Sneha Rao (manager).","decided_at":"2026-11-12T19:08:43.515102"}

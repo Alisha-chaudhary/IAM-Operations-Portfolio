@@ -1,0 +1,12 @@
+EVIDENCE ID: Evidence/ACR-001-E07-item17-auditor-security-auditor-retain.txt
+Title: Review decision — item 17
+Decided at: 2026-11-12T19:08:43.250750Z
+Source: IdentityGuard API POST /access-reviews/1/decisions
+Type: Actual lab evidence
+Activity: Review decision recording
+Reviewer: identityguard.admin (user 8, IAM Administrator)
+Item ID: 17
+Decision: RETAIN
+Status: 200
+======================================================================
+{"id":17,"cycle_id":1,"user_id":10,"role_id":11,"assignment_assigned_at":"2026-11-12T16:59:48.086723","decision":"RETAIN","reviewer_id":8,"decision_reason":"RETAIN: Security Auditor appropriate for governance and audit functions. Read-only oversight role. Simulated business reviewer: IAM / security leadership.","decided_at":"2026-11-12T19:08:43.780900"}

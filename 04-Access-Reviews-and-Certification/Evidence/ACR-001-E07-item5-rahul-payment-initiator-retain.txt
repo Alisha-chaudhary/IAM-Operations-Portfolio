@@ -1,0 +1,12 @@
+EVIDENCE ID: Evidence/ACR-001-E07-item5-rahul-payment-initiator-retain.txt
+Title: Review decision — item 5
+Decided at: 2026-11-12T19:08:43.250750Z
+Source: IdentityGuard API POST /access-reviews/1/decisions
+Type: Actual lab evidence
+Activity: Review decision recording
+Reviewer: identityguard.admin (user 8, IAM Administrator)
+Item ID: 5
+Decision: RETAIN
+Status: 200
+======================================================================
+{"id":5,"cycle_id":1,"user_id":2,"role_id":7,"assignment_assigned_at":"2026-11-12T16:59:47.549026","decision":"RETAIN","reviewer_id":8,"decision_reason":"RETAIN: Payment Initiator retained for Rahul Mehta, Finance department. Sensitive payment-creation access; no Payment Approver held, so no active SoD-01 conflict. Flagged for periodic manager re-confirmation as a watch item. Simulated business reviewer: Priya Nair (manager).","decided_at":"2026-11-12T19:08:43.405570"}

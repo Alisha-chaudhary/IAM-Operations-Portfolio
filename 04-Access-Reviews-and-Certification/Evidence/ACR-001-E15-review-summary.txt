@@ -1,0 +1,269 @@
+EVIDENCE ID: ACR-001-E15-review-summary
+Title: Access review summary report
+Captured: 2026-11-12T19:15:27.442636Z
+Source: IdentityGuard API GET /reports/access-review-summary
+Type: Actual lab evidence
+Activity: Review completion
+Demonstrates: Review cycle summary: cycles, items, decisions, completion
+File: Evidence/ACR-001-E15-review-summary.txt
+======================================================================
+{
+  "total_cycles": 1,
+  "open_cycles": 0,
+  "completed_cycles": 1,
+  "total_review_items": 18,
+  "pending_decisions": 0,
+  "items": [
+    {
+      "cycle_id": 1,
+      "name": "Asteron Q4 2026 User Access Certification",
+      "status": "COMPLETED",
+      "created_by_id": 8,
+      "creator_username": "identityguard.admin",
+      "created_at": "2026-11-12T19:08:04.597418",
+      "completed_at": "2026-11-12T19:09:35.010770",
+      "total_count": 18,
+      "pending_count": 0,
+      "retain_count": 16,
+      "revoke_decision_count": 2,
+      "decided_count": 18,
+      "completion_percentage": 100.0,
+      "items": [
+        {
+          "item_id": 1,
+          "user_id": 1,
+          "username": "priya.nair",
+          "role_id": 3,
+          "role_name": "Finance Manager",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Finance Manager role appropriate for Priya Nair, Finance department. finance-ledger:read oversight required for role. No SoD conflict. Simulated business reviewer: Finance department head.",
+          "decided_at": "2026-11-12T19:08:43.269418"
+        },
+        {
+          "item_id": 2,
+          "user_id": 1,
+          "username": "priya.nair",
+          "role_id": 8,
+          "role_name": "Payment Approver",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Payment Approver appropriate for Finance Manager. Priya Nair does not hold Payment Initiator, so no active SoD-01 conflict. Simulated business reviewer: Finance department head.",
+          "decided_at": "2026-11-12T19:08:43.309211"
+        },
+        {
+          "item_id": 3,
+          "user_id": 2,
+          "username": "rahul.mehta",
+          "role_id": 2,
+          "role_name": "Finance Analyst",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Finance Analyst appropriate for Rahul Mehta, Finance department. Reads general ledger as part of role. Simulated business reviewer: Priya Nair (manager).",
+          "decided_at": "2026-11-12T19:08:43.341990"
+        },
+        {
+          "item_id": 4,
+          "user_id": 2,
+          "username": "rahul.mehta",
+          "role_id": 3,
+          "role_name": "Finance Manager",
+          "assignment_assigned_at": "2026-11-12T18:36:21.906454",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Finance Manager appropriate for Rahul Mehta, Finance department. Overlaps with Finance Analyst (same finance-ledger:read permission) but adds oversight responsibility; not excessive. Simulated business reviewer: Priya Nair (manager).",
+          "decided_at": "2026-11-12T19:08:43.375047"
+        },
+        {
+          "item_id": 5,
+          "user_id": 2,
+          "username": "rahul.mehta",
+          "role_id": 7,
+          "role_name": "Payment Initiator",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Payment Initiator retained for Rahul Mehta, Finance department. Sensitive payment-creation access; no Payment Approver held, so no active SoD-01 conflict. Flagged for periodic manager re-confirmation as a watch item. Simulated business reviewer: Priya Nair (manager).",
+          "decided_at": "2026-11-12T19:08:43.405570"
+        },
+        {
+          "item_id": 6,
+          "user_id": 3,
+          "username": "sneha.rao",
+          "role_id": 4,
+          "role_name": "HR Analyst",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: HR Analyst appropriate for Sneha Rao, HR department. Maintains employee records. Simulated business reviewer: HR department head.",
+          "decided_at": "2026-11-12T19:08:43.444540"
+        },
+        {
+          "item_id": 7,
+          "user_id": 3,
+          "username": "sneha.rao",
+          "role_id": 5,
+          "role_name": "System Administrator",
+          "assignment_assigned_at": "2026-11-12T18:38:04.518767",
+          "decision": "REVOKE",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "REVOKE: System Administrator is privileged emergency access granted for a production incident (time-limited, expires 2026-11-12 19:37:23). Emergency need concluded; no current business justification for an HR user to hold privileged server administration. Remove promptly rather than waiting for auto-expiry. Simulated business reviewer: HR department head.",
+          "decided_at": "2026-11-12T19:08:43.479298"
+        },
+        {
+          "item_id": 8,
+          "user_id": 4,
+          "username": "meera.iyer",
+          "role_id": 2,
+          "role_name": "Finance Analyst",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "REVOKE",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "REVOKE: Meera Iyer moved from Finance to HR but retained Finance Analyst (stale cross-department access, identified in seed data). No longer required for HR responsibilities. Least privilege. Simulated business reviewer: Sneha Rao (manager).",
+          "decided_at": "2026-11-12T19:08:43.515102"
+        },
+        {
+          "item_id": 9,
+          "user_id": 4,
+          "username": "meera.iyer",
+          "role_id": 4,
+          "role_name": "HR Analyst",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: HR Analyst appropriate for Meera Iyer, HR department. Simulated business reviewer: Sneha Rao (manager).",
+          "decided_at": "2026-11-12T19:08:43.560713"
+        },
+        {
+          "item_id": 10,
+          "user_id": 5,
+          "username": "lisa",
+          "role_id": 5,
+          "role_name": "System Administrator",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: System Administrator appropriate for Lisa C, IT department. Privileged role but department-appropriate. Periodic re-confirmation recommended. Simulated business reviewer: IT department head.",
+          "decided_at": "2026-11-12T19:08:43.593378"
+        },
+        {
+          "item_id": 11,
+          "user_id": 5,
+          "username": "lisa",
+          "role_id": 14,
+          "role_name": "PAM Operator",
+          "assignment_assigned_at": "2026-11-12T16:59:48.097752",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: PAM Operator appropriate for Lisa C, IT department. Simulated business reviewer: IT department head.",
+          "decided_at": "2026-11-12T19:08:43.626287"
+        },
+        {
+          "item_id": 12,
+          "user_id": 6,
+          "username": "kiran.reddy",
+          "role_id": 6,
+          "role_name": "Database Administrator",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Database Administrator appropriate for Kiran Reddy, IT department. Privileged but department-appropriate. Simulated business reviewer: Lisa C (manager).",
+          "decided_at": "2026-11-12T19:08:43.657972"
+        },
+        {
+          "item_id": 13,
+          "user_id": 6,
+          "username": "kiran.reddy",
+          "role_id": 14,
+          "role_name": "PAM Operator",
+          "assignment_assigned_at": "2026-11-12T16:59:48.097752",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: PAM Operator appropriate for Kiran Reddy, IT department. Simulated business reviewer: Lisa C (manager).",
+          "decided_at": "2026-11-12T19:08:43.689037"
+        },
+        {
+          "item_id": 14,
+          "user_id": 7,
+          "username": "arjun.verma",
+          "role_id": 1,
+          "role_name": "SOC Analyst",
+          "assignment_assigned_at": "2026-11-12T16:59:47.549026",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: SOC Analyst appropriate for Arjun Verma, Security department. Security monitoring role. Simulated business reviewer: Security department head.",
+          "decided_at": "2026-11-12T19:08:43.717560"
+        },
+        {
+          "item_id": 15,
+          "user_id": 8,
+          "username": "identityguard.admin",
+          "role_id": 10,
+          "role_name": "IAM Administrator",
+          "assignment_assigned_at": "2026-11-12T16:59:47.887076",
+          "decision": "RETAIN",
+          "reviewer_id": 11,
+          "reviewer_username": "reviewer",
+          "decision_reason": "RETAIN: IAM Administrator required for identityguard.admin platform administration. Privileged role; controlled via four-eyes in the access request/provisioning workflow. Reviewed by stand-in reviewer (user 11) to preserve independence because identityguard.admin cannot self-review their own assignment. Simulated business reviewer: IAM / security leadership.",
+          "decided_at": "2026-11-12T19:09:00.927482"
+        },
+        {
+          "item_id": 16,
+          "user_id": 9,
+          "username": "identityguard.admin2",
+          "role_id": 10,
+          "role_name": "IAM Administrator",
+          "assignment_assigned_at": "2026-11-12T16:59:47.989610",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: IAM Administrator required for identityguard.admin2, platform administration. Privileged role; controlled via four-eyes in the access request/provisioning workflow. Simulated business reviewer: IAM / security leadership.",
+          "decided_at": "2026-11-12T19:08:43.744867"
+        },
+        {
+          "item_id": 17,
+          "user_id": 10,
+          "username": "auditor",
+          "role_id": 11,
+          "role_name": "Security Auditor",
+          "assignment_assigned_at": "2026-11-12T16:59:48.086723",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Security Auditor appropriate for governance and audit functions. Read-only oversight role. Simulated business reviewer: IAM / security leadership.",
+          "decided_at": "2026-11-12T19:08:43.780900"
+        },
+        {
+          "item_id": 18,
+          "user_id": 11,
+          "username": "reviewer",
+          "role_id": 13,
+          "role_name": "Access Reviewer",
+          "assignment_assigned_at": "2026-11-12T16:59:48.089719",
+          "decision": "RETAIN",
+          "reviewer_id": 8,
+          "reviewer_username": "identityguard.admin",
+          "decision_reason": "RETAIN: Access Reviewer appropriate for reviewer, access certification functions. Simulated business reviewer: IAM / security leadership.",
+          "decided_at": "2026-11-12T19:08:43.805989"
+        }
+      ]
+    }
+  ]
+}

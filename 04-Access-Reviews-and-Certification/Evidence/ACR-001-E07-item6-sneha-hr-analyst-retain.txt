@@ -1,0 +1,12 @@
+EVIDENCE ID: Evidence/ACR-001-E07-item6-sneha-hr-analyst-retain.txt
+Title: Review decision — item 6
+Decided at: 2026-11-12T19:08:43.250750Z
+Source: IdentityGuard API POST /access-reviews/1/decisions
+Type: Actual lab evidence
+Activity: Review decision recording
+Reviewer: identityguard.admin (user 8, IAM Administrator)
+Item ID: 6
+Decision: RETAIN
+Status: 200
+======================================================================
+{"id":6,"cycle_id":1,"user_id":3,"role_id":4,"assignment_assigned_at":"2026-11-12T16:59:47.549026","decision":"RETAIN","reviewer_id":8,"decision_reason":"RETAIN: HR Analyst appropriate for Sneha Rao, HR department. Maintains employee records. Simulated business reviewer: HR department head.","decided_at":"2026-11-12T19:08:43.444540"}

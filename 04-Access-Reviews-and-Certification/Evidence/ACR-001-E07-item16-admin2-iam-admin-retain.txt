@@ -1,0 +1,12 @@
+EVIDENCE ID: Evidence/ACR-001-E07-item16-admin2-iam-admin-retain.txt
+Title: Review decision — item 16
+Decided at: 2026-11-12T19:08:43.250750Z
+Source: IdentityGuard API POST /access-reviews/1/decisions
+Type: Actual lab evidence
+Activity: Review decision recording
+Reviewer: identityguard.admin (user 8, IAM Administrator)
+Item ID: 16
+Decision: RETAIN
+Status: 200
+======================================================================
+{"id":16,"cycle_id":1,"user_id":9,"role_id":10,"assignment_assigned_at":"2026-11-12T16:59:47.989610","decision":"RETAIN","reviewer_id":8,"decision_reason":"RETAIN: IAM Administrator required for identityguard.admin2, platform administration. Privileged role; controlled via four-eyes in the access request/provisioning workflow. Simulated business reviewer: IAM / security leadership.","decided_at":"2026-11-12T19:08:43.744867"}

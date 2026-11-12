@@ -1,0 +1,67 @@
+EVIDENCE ID: ACR-ALL-E06-access-requests
+Title: Access request inventory
+Captured: 2026-11-12T19:05:41.104087Z
+Source: IdentityGuard API GET /access-requests
+Type: Actual lab evidence
+Activity: Review population preparation
+Demonstrates: All access requests and their status
+File: Evidence/ACR-ALL-E06-access-requests.txt
+======================================================================
+[
+  {
+    "id": 4,
+    "requester_id": 8,
+    "target_user_id": 2,
+    "role_id": 3,
+    "justification": "Duplicate Finance Manager request",
+    "status": "APPROVED",
+    "decision_by": "identityguard.admin2",
+    "decision_reason": "Approving duplicate request to test AlreadyProvisioned at provisioning.",
+    "requested_at": "2026-11-12T18:38:46.680906",
+    "decided_at": "2026-11-12T18:39:17.019523",
+    "provisioned_at": null,
+    "expires_at": null
+  },
+  {
+    "id": 3,
+    "requester_id": 8,
+    "target_user_id": 2,
+    "role_id": 8,
+    "justification": "Controlled SoD conflict test: request Payment Approver for a user who already holds Payment Initiator.",
+    "status": "APPROVED",
+    "decision_by": "identityguard.admin2",
+    "decision_reason": "Approved for SoD conflict test demonstration.",
+    "requested_at": "2026-11-12T18:38:22.067351",
+    "decided_at": "2026-11-12T18:38:29.508311",
+    "provisioned_at": null,
+    "expires_at": null
+  },
+  {
+    "id": 2,
+    "requester_id": 8,
+    "target_user_id": 3,
+    "role_id": 5,
+    "justification": "Temporary System Administrator access for emergency server investigation during production incident, time-limited to one hour.",
+    "status": "PROVISIONED",
+    "decision_by": "identityguard.admin2",
+    "decision_reason": "Approved time-limited System Administrator access for emergency incident investigation.",
+    "requested_at": "2026-11-12T18:37:37.701890",
+    "decided_at": "2026-11-12T18:37:56.952264",
+    "provisioned_at": "2026-11-12T18:38:04.515812",
+    "expires_at": "2026-11-12T19:37:23"
+  },
+  {
+    "id": 1,
+    "requester_id": 8,
+    "target_user_id": 2,
+    "role_id": 3,
+    "justification": "Temporary Finance Manager coverage to perform finance-ledger oversight and reporting duties during the Finance Manager absence.",
+    "status": "PROVISIONED",
+    "decision_by": "identityguard.admin2",
+    "decision_reason": "Manager endorsed temporary Finance Manager coverage for finance-ledger oversight during manager absence.",
+    "requested_at": "2026-11-12T18:35:53.045577",
+    "decided_at": "2026-11-12T18:36:04.279672",
+    "provisioned_at": "2026-11-12T18:36:21.906454",
+    "expires_at": null
+  }
+]

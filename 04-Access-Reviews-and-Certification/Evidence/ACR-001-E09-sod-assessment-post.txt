@@ -1,0 +1,27 @@
+EVIDENCE ID: ACR-001-E09-sod-assessment-post
+Title: SoD violations report after remediation
+Captured: 2026-11-12T19:10:42.030199Z
+Source: IdentityGuard API GET /reports/sod-violations
+Type: Actual lab evidence
+Activity: Post-remediation verification
+Demonstrates: SoD conflict state after revocations
+File: Evidence/ACR-001-E09-sod-assessment-post.txt
+======================================================================
+{
+  "rules": [
+    [
+      "Payment Approver",
+      "Payment Initiator"
+    ],
+    [
+      "SOC Analyst",
+      "System Administrator"
+    ],
+    [
+      "Database Administrator",
+      "Security Auditor"
+    ]
+  ],
+  "total_count": 0,
+  "items": []
+}

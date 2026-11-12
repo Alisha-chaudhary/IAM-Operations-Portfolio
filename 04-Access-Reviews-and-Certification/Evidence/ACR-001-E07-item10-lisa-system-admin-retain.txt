@@ -1,0 +1,12 @@
+EVIDENCE ID: Evidence/ACR-001-E07-item10-lisa-system-admin-retain.txt
+Title: Review decision — item 10
+Decided at: 2026-11-12T19:08:43.250750Z
+Source: IdentityGuard API POST /access-reviews/1/decisions
+Type: Actual lab evidence
+Activity: Review decision recording
+Reviewer: identityguard.admin (user 8, IAM Administrator)
+Item ID: 10
+Decision: RETAIN
+Status: 200
+======================================================================
+{"id":10,"cycle_id":1,"user_id":5,"role_id":5,"assignment_assigned_at":"2026-11-12T16:59:47.549026","decision":"RETAIN","reviewer_id":8,"decision_reason":"RETAIN: System Administrator appropriate for Lisa C, IT department. Privileged role but department-appropriate. Periodic re-confirmation recommended. Simulated business reviewer: IT department head.","decided_at":"2026-11-12T19:08:43.593378"}

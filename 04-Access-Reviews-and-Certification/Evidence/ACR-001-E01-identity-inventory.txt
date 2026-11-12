@@ -1,0 +1,158 @@
+EVIDENCE ID: ACR-001-E01-identity-inventory
+Title: Initial identity inventory
+Captured: 2026-11-12T19:05:41.104087Z
+Source: IdentityGuard API GET /reports/identity-inventory
+Type: Actual lab evidence
+Activity: Review population preparation
+Demonstrates: Current users, departments, status, role counts
+File: Evidence/ACR-001-E01-identity-inventory.txt
+======================================================================
+{
+  "total_count": 12,
+  "items": [
+    {
+      "user_id": 1,
+      "employee_id": "EMP001",
+      "username": "priya.nair",
+      "full_name": "Priya Nair",
+      "department": "Finance",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 2
+    },
+    {
+      "user_id": 2,
+      "employee_id": "EMP002",
+      "username": "rahul.mehta",
+      "full_name": "Rahul Mehta",
+      "department": "Finance",
+      "manager_id": 1,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 3
+    },
+    {
+      "user_id": 3,
+      "employee_id": "EMP003",
+      "username": "sneha.rao",
+      "full_name": "Sneha Rao",
+      "department": "HR",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 2
+    },
+    {
+      "user_id": 4,
+      "employee_id": "EMP004",
+      "username": "meera.iyer",
+      "full_name": "Meera Iyer",
+      "department": "HR",
+      "manager_id": 3,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 2
+    },
+    {
+      "user_id": 5,
+      "employee_id": "EMP005",
+      "username": "lisa",
+      "full_name": "Lisa C",
+      "department": "IT",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 2
+    },
+    {
+      "user_id": 6,
+      "employee_id": "EMP006",
+      "username": "kiran.reddy",
+      "full_name": "Kiran Reddy",
+      "department": "IT",
+      "manager_id": 5,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 2
+    },
+    {
+      "user_id": 7,
+      "employee_id": "EMP007",
+      "username": "arjun.verma",
+      "full_name": "Arjun Verma",
+      "department": "Security",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.542028",
+      "terminated_at": null,
+      "role_assignment_count": 1
+    },
+    {
+      "user_id": 8,
+      "employee_id": "ADM001",
+      "username": "identityguard.admin",
+      "full_name": "IdentityGuard Admin",
+      "department": "Security",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.775106",
+      "terminated_at": null,
+      "role_assignment_count": 1
+    },
+    {
+      "user_id": 9,
+      "employee_id": "ADM002",
+      "username": "identityguard.admin2",
+      "full_name": "IdentityGuard Admin Two",
+      "department": "Security",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.885822",
+      "terminated_at": null,
+      "role_assignment_count": 1
+    },
+    {
+      "user_id": 10,
+      "employee_id": "AUD001",
+      "username": "auditor",
+      "full_name": "Security Auditor",
+      "department": "Security",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:47.989610",
+      "terminated_at": null,
+      "role_assignment_count": 1
+    },
+    {
+      "user_id": 11,
+      "employee_id": "REV001",
+      "username": "reviewer",
+      "full_name": "Access Reviewer",
+      "department": "Security",
+      "manager_id": null,
+      "status": "ACTIVE",
+      "created_at": "2026-11-12T16:59:48.086723",
+      "terminated_at": null,
+      "role_assignment_count": 1
+    },
+    {
+      "user_id": 12,
+      "employee_id": "EMP-1001",
+      "username": "maya.rao",
+      "full_name": "Maya Rao",
+      "department": "Finance",
+      "manager_id": 1,
+      "status": "TERMINATED",
+      "created_at": "2026-11-12T17:57:17.497969",
+      "terminated_at": "2026-11-12T18:15:20.946679",
+      "role_assignment_count": 0
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+EVIDENCE ID: ACR-ALL-E05-user-inventory
+Title: User inventory
+Captured: 2026-11-12T19:05:41.104087Z
+Source: IdentityGuard API GET /users
+Type: Actual lab evidence
+Activity: Identity validation
+Demonstrates: Current user identities, status, departments
+File: Evidence/ACR-ALL-E05-user-inventory.txt
+======================================================================
+[
+  {
+    "id": 1,
+    "employee_id": "EMP001",
+    "username": "priya.nair",
+    "full_name": "Priya Nair",
+    "email": "priya.nair@example.test",
+    "department_id": 1,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 2,
+    "employee_id": "EMP002",
+    "username": "rahul.mehta",
+    "full_name": "Rahul Mehta",
+    "email": "rahul.mehta@example.test",
+    "department_id": 1,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 3,
+    "employee_id": "EMP003",
+    "username": "sneha.rao",
+    "full_name": "Sneha Rao",
+    "email": "sneha.rao@example.test",
+    "department_id": 2,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 4,
+    "employee_id": "EMP004",
+    "username": "meera.iyer",
+    "full_name": "Meera Iyer",
+    "email": "meera.iyer@example.test",
+    "department_id": 2,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 5,
+    "employee_id": "EMP005",
+    "username": "lisa",
+    "full_name": "Lisa C",
+    "email": "lisa@example.test",
+    "department_id": 3,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 6,
+    "employee_id": "EMP006",
+    "username": "kiran.reddy",
+    "full_name": "Kiran Reddy",
+    "email": "kiran.reddy@example.test",
+    "department_id": 3,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 7,
+    "employee_id": "EMP007",
+    "username": "arjun.verma",
+    "full_name": "Arjun Verma",
+    "email": "arjun.verma@example.test",
+    "department_id": 4,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 8,
+    "employee_id": "ADM001",
+    "username": "identityguard.admin",
+    "full_name": "IdentityGuard Admin",
+    "email": "identityguard.admin@example.test",
+    "department_id": 4,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 9,
+    "employee_id": "ADM002",
+    "username": "identityguard.admin2",
+    "full_name": "IdentityGuard Admin Two",
+    "email": "identityguard.admin2@example.test",
+    "department_id": 4,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 10,
+    "employee_id": "AUD001",
+    "username": "auditor",
+    "full_name": "Security Auditor",
+    "email": "auditor@example.test",
+    "department_id": 4,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 11,
+    "employee_id": "REV001",
+    "username": "reviewer",
+    "full_name": "Access Reviewer",
+    "email": "reviewer@example.test",
+    "department_id": 4,
+    "status": "ACTIVE"
+  },
+  {
+    "id": 12,
+    "employee_id": "EMP-1001",
+    "username": "maya.rao",
+    "full_name": "Maya Rao",
+    "email": "maya.rao@example.test",
+    "department_id": 1,
+    "status": "TERMINATED"
+  }
+]
