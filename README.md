@@ -232,6 +232,40 @@ All simulated stakeholder actions are explicitly labelled. The governance librar
 
 ---
 
+## Scenario 2 — Access Requests and Provisioning (Completed)
+
+Scenario 2 documents the operational handling of employee access requests for the fictional organisation Asteron Financial Services. The scenario was executed in the local IdentityGuard lab and demonstrates that access is not granted merely because someone requests it.
+
+**Case references:** AR-2026-001, AR-2026-002, AR-2026-003, AR-2026-004  
+**Scenario documentation:** `02-Access-Requests-and-Provisioning/`
+
+### Case outcome summary
+
+| Case | Focus | Outcome |
+|---|---|---|
+| AR-2026-001 | Standard non-privileged access (Rahul Mehta -> Finance Manager) | Provisioned |
+| AR-2026-002 | Privileged access with four-eyes (Sneha Rao -> System Administrator, time-limited) | Provisioned (time-limited) |
+| AR-2026-003 | SoD conflict (Rahul Mehta -> Payment Approver, conflicts with Payment Initiator) | Blocked (SoD-01) |
+| AR-2026-004 | Exception handling (missing justification, invalid target, inactive target, duplicate) | All exceptions confirmed |
+
+### Key limitations
+
+- IdentityGuard supports one approver per access request; additional organisational approvals (manager endorsement) are recorded separately as simulated stakeholder records.
+- Only two IAM Administrator identities exist in the lab; for privileged four-eyes, the requester and provisioner are the same identity while the approver is different.
+- Privileged access to an ordinary user was made time-limited (expires_at) to avoid permanent privileged access.
+- The `/users` endpoint does not expose `manager_id`; manager relationships were validated directly against the database.
+
+### Navigation
+
+- Scenario overview: `02-Access-Requests-and-Provisioning/README.md`
+- Evidence register: `02-Access-Requests-and-Provisioning/Evidence/Evidence-Register.md`
+- Exceptions and limitations: `02-Access-Requests-and-Provisioning/Evidence/Exceptions-and-Limitations.md`
+- Closure report: `02-Access-Requests-and-Provisioning/Evidence/Final-Scenario-Closure-Report.md`
+
+All simulated stakeholder actions are explicitly labelled. The governance library remains in `00-Governance-Framework/` and is referenced, not duplicated.
+
+---
+
 ## Generated files
 
 | # | File | Type |
