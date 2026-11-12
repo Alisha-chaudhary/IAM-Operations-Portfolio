@@ -1,4 +1,4 @@
-# Case JML-2026-001 — Maya Rao (EMP-1001)
+# Case JML-2026-001 - Maya Rao (EMP-1001)
 
 **Case reference:** JML-2026-001  
 **Employee:** Maya Rao, Employee ID EMP-1001  
